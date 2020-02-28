@@ -42,6 +42,7 @@ public class JavaApplication1 {
             }
         }
         doc.write(new FileOutputStream("output.docx"));
+        doc.close();
     }
 
 }
