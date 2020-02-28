@@ -3,7 +3,7 @@
     <type>org.netbeans.modules.java.j2seproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
-            <name>JAVA_DOCX_DEMO</name>
+            <name>TSN_JAVA_POI_DOCX</name>
             <source-roots>
                 <root id="src.dir"/>
             </source-roots>
