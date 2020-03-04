@@ -1,5 +1,6 @@
 package tsn_java_poi_docx;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.util.List;
 import org.apache.poi.openxml4j.opc.OPCPackage;
@@ -13,7 +14,9 @@ import org.apache.poi.xwpf.usermodel.XWPFTableRow;
 public class JavaApplication1 {
 
     public static void main(String[] args) throws Exception {
-        XWPFDocument doc = new XWPFDocument(OPCPackage.open("input.docx"));
+        String dir = new File(".").getAbsoluteFile().getParentFile().getAbsolutePath()
+                + System.getProperty("file.separator");
+        XWPFDocument doc = new XWPFDocument(OPCPackage.open(dir + "input.docx"));
         for (XWPFParagraph p : doc.getParagraphs()) {
             List<XWPFRun> runs = p.getRuns();
             if (runs != null) {
@@ -41,8 +44,8 @@ public class JavaApplication1 {
                 }
             }
         }
-        doc.write(new FileOutputStream("output.docx"));
-        doc.close();
+        FileOutputStream fos = new FileOutputStream(dir + "output.docx");
+        doc.write(fos);
+        fos.close();
     }
-
 }
