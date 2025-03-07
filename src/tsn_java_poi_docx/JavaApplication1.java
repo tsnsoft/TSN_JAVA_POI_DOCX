@@ -22,8 +22,8 @@ public class JavaApplication1 {
             if (runs != null) {
                 for (XWPFRun r : runs) {
                     String text = r.getText(0);
-                    if (text != null && text.contains("user")) {
-                        text = text.replace("user", "T.S.N.");
+                    if (text != null && text.contains("User")) {
+                        text = text.replace("User", "T.S.N.");
                         r.setText(text, 0);
                     }
                 }
@@ -35,8 +35,8 @@ public class JavaApplication1 {
                     for (XWPFParagraph p : cell.getParagraphs()) {
                         for (XWPFRun r : p.getRuns()) {
                             String text = r.getText(0);
-                            if (text != null && text.contains("user")) {
-                                text = text.replace("user", "T.S.N.");
+                            if (text != null && text.contains("User")) {
+                                text = text.replace("User", "T.S.N.");
                                 r.setText(text, 0);
                             }
                         }
